@@ -52,4 +52,4 @@ jobs:
       - name: Scan image for vulnerabilities 
         uses: azure/container-scan@v0
         with:
-          image-name: volschin/docker-events-pushover:${{ env.tag }}
+          image-name: volschin/docker-events-pushover:latest
