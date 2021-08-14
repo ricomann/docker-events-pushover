@@ -48,3 +48,8 @@ jobs:
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           tags: |
             ${{ env.tag }}
+            
+      - name: Scan image for vulnerabilities 
+        uses: azure/container-scan@v0
+        with:
+          image-name: volschin/docker-events-pushover:${{ GITHUB_ENV.tag }}
