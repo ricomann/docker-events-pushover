@@ -1,4 +1,4 @@
-FROM python:3.9-alpine3.14
+FROM python:3.8-alpine3.14
 
 # Deploy version
 ARG BUILD_VERSION
