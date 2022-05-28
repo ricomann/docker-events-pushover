@@ -72,7 +72,6 @@ def watch_and_notify_events(client):
 def send_message(message):
     client = Client(po_key, api_token=po_token)
     client.send_message(message,title="Docker Event")
-    pass
 
 
 def exit_handler(_signo, _stack_frame):
@@ -106,5 +105,3 @@ if __name__ == '__main__':
 #    send_message(message)
 
     watch_and_notify_events(client)
-
-    pass
