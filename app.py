@@ -21,7 +21,7 @@ from pushover import init, Client
 
 event_filters = ["create","update","destroy","die","kill","pause","unpause","start","stop"]
 ignore_names = []
-ignore_label = "docker-events.ignore"
+IGNORE_LABEL = "docker-events.ignore"
 
 BUILD_VERSION=os.getenv('BUILD_VERSION')
 APP_NAME = 'Docker Events Pushover (v{})'.format(BUILD_VERSION)
@@ -48,7 +48,7 @@ def watch_and_notify_events(client):
         x = 'no'
 
         try:
-            x = event['Actor']['Attributes']['docker-events.ignore']
+            x = event['Actor']['Attributes'][IGNORE_LABEL]
         except KeyError:
             pass
 
