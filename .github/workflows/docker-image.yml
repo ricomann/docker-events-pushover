@@ -50,6 +50,7 @@ jobs:
             ${{ env.tag }}
             
       - name: Scan image for vulnerabilities 
-        uses: azure/container-scan@latest
+        uses: azure/container-scan@master
+        
         with:
           image-name: ${{ env.tag }}
