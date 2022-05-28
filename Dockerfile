@@ -1,10 +1,10 @@
-FROM python:3.8-alpine
+FROM python:3.9-alpine
 
 # Deploy version
 ARG BUILD_VERSION
 ENV BUILD_VERSION=${BUILD_VERSION}
 
-RUN apk --no-cache add tzdata
+RUN apk --no-cache add tzdata ca-certificates
 
 ENV TZ=Europe/Berlin
 
