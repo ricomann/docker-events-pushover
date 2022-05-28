@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import docker
-from pushover import init, Client
 import os
 import sys
 import time
 import signal
+import docker
+from pushover import init, Client
 
 event_filters = ["create","update","destroy","die","kill","pause","unpause","start","stop"]
 ignore_names = []
