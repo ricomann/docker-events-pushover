@@ -41,7 +41,6 @@ def watch_and_notify_events(client):
 
     for event in client.events(filters=event_filters, decode=True):
 #        print(event)
-        container_id = event['Actor']['ID'][:12]
         attributes = event['Actor']['Attributes']
         when = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(event['time']))
         event['status'] = event['status']+'d'
@@ -73,9 +72,6 @@ def watch_and_notify_events(client):
 def send_message(message):
     client = Client(po_key, api_token=po_token)
     client.send_message(message,title="Docker Event")
-##    global pb_key
-##    pb = Pushbullet(pb_key)
-##    pb.push_note("Docker Event", message)
     pass
 
 
@@ -89,7 +85,6 @@ def host_server(client):
 
 
 if __name__ == '__main__':
-##    pb_key = get_config("PB_API_KEY")
     po_token = get_config("PUSHOVER_TOKEN")
     po_key = get_config("PUSHOVER_KEY")
 
