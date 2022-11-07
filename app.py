@@ -19,8 +19,8 @@ import signal
 import docker
 from pushover import init, Client
 
-event_filters = ["attach","commit","copy","create","destroy","detach","die","exec_create","exec_detach","exec_die",
-		 "exec_start","export","health_status","kill","oom","pause","rename","resize","restart","start","stop","top","unpause","update]
+event_filters = ["attach","commit","copy","create","destroy","detach","die","exec_create","exec_detach","exec_die","exec_start","export",\
+		 "health_status","kill","oom","pause","rename","resize","restart","start","stop","top","unpause","update"]
 ignore_names = []
 IGNORE_LABEL = "docker-events.ignore"
 
