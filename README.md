@@ -1,5 +1,7 @@
 # Docker Events Pushover
 Receive Pushover notifications when on docker container events
+Supported Events can you see at the Docker page
+[https://docs.docker.com/engine/reference/commandline/events/]
 
 ## How it works
 This image connects to the host machine socket, through a volume mapping, and listen [Docker Events API](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.24/#/monitor-dockers-events).
